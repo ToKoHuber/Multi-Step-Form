@@ -1,4 +1,4 @@
-import { Input } from "postcss";
+import { Input } from "@/app/component/Input";
 
 export default function TextField() {
   return (

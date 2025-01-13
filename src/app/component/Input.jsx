@@ -1,3 +1,8 @@
-export const Input = ({}) => {
-  return <div></div>;
+export const Input = ({ label, placeholder }) => {
+  return (
+    <div>
+      <p>{label}</p>
+      <input className="" type="text" placeholder={placeholder} />
+    </div>
+  );
 };
