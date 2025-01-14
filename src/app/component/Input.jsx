@@ -1,4 +1,4 @@
-export const Input = ({ label, placeholder, error }) => {
+export const Input = ({ label, placeholder, type, error }) => {
   return (
     <div className="flex flex-col gap-2">
       <p className="text-[#334155] text-Inter text-[14px] normal font-semibold leading-[16px] ">
@@ -6,7 +6,7 @@ export const Input = ({ label, placeholder, error }) => {
       </p>
       <input
         className="w-[416px] h-[44px] rounded-[8px] border-[1px] p-[12px]"
-        type="text"
+        type={type}
         placeholder={placeholder}
       />
       <p>{error}</p>
