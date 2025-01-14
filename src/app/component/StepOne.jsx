@@ -3,7 +3,7 @@ import Logo from "./Logo";
 import TextField from "./stepOne/TextField";
 import Button from "./Button";
 
-export default function StepOne() {
+export default function StepOne({ nextPage }) {
   return (
     <div className="w-[480px] h-[655px] flex flex-col justify-between rounded-[8px] p-8 bg-[#FFFFFF]">
       <div className="flex flex-col gap-[28px]">
@@ -16,7 +16,7 @@ export default function StepOne() {
         </div>
       </div>
       <div>
-        <Button buttonText="Continue 1/3" />
+        <Button nextPage={nextPage} buttonText="Continue 1/3" />
       </div>
     </div>
   );

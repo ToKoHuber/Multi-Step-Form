@@ -3,7 +3,7 @@ import Logo from "./Logo";
 import TextField from "./StepThree/TextField";
 import Button from "./Button";
 
-export default function StepThree() {
+export default function StepThree({ nextPage }) {
   return (
     <div className="w-[480px] h-[655px] flex flex-col justify-between rounded-[8px] p-8 bg-[#FFFFFF]">
       <div className="flex flex-col gap-[28px]">
@@ -16,7 +16,7 @@ export default function StepThree() {
         </div>
       </div>
       <div>
-        <Button buttonText="Continue 3/3" />
+        <Button nextPage={nextPage} buttonText="Continue 3/3" />
       </div>
     </div>
   );
