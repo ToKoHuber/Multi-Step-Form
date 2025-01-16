@@ -1,4 +1,4 @@
-export default function ButtonPrevious({ buttonText, previousPage }) {
+export default function ButtonBack({ buttonText, previousPage }) {
   return (
     <div
       onClick={previousPage}

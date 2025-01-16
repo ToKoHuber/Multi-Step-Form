@@ -2,7 +2,7 @@ import FormTitle from "./FormTitle";
 import Logo from "./Logo";
 import TextField from "./StepThree/TextField";
 import ButtonNextSmall from "./ButtonNextSmall";
-import ButtonPrevious from "./ButtonPrevious";
+import ButtonBack from "./ButtonBack";
 
 export default function StepThree({ nextPage, previousPage }) {
   return (
@@ -17,7 +17,7 @@ export default function StepThree({ nextPage, previousPage }) {
         </div>
       </div>
       <div className="flex gap-1">
-        <ButtonPrevious previousPage={previousPage} buttonText="Back" />
+        <ButtonBack previousPage={previousPage} buttonText="Back" />
         <ButtonNextSmall nextPage={nextPage} buttonText="Continue 3/3" />
       </div>
     </div>
