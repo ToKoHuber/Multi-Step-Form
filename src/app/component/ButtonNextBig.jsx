@@ -1,4 +1,4 @@
-export default function ({ buttonText, nextPage }) {
+export default function ButtonNextBig({ buttonText, nextPage }) {
   return (
     <div
       onClick={nextPage}

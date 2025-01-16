@@ -1,7 +1,7 @@
 import FormTitle from "./FormTitle";
 import Logo from "./Logo";
 import TextField from "./stepOne/TextField";
-import Button from "./Button";
+import ButtonNextBig from "./ButtonNextBig";
 
 export default function StepOne({ nextPage }) {
   return (
@@ -16,7 +16,7 @@ export default function StepOne({ nextPage }) {
         </div>
       </div>
       <div>
-        <Button nextPage={nextPage} buttonText="Continue 1/3" />
+        <ButtonNextBig nextPage={nextPage} buttonText="Continue 1/3" />
       </div>
     </div>
   );

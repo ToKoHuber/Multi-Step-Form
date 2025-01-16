@@ -1,9 +1,10 @@
 import FormTitle from "./FormTitle";
 import Logo from "./Logo";
 import TextField from "./stepTwo/TextField";
-import Button from "./Button";
+import ButtonNextSmall from "./ButtonNextSmall";
+import ButtonPrevious from "./ButtonPrevious";
 
-export default function StepTwo({ nextPage }) {
+export default function StepTwo({ nextPage, previousPage }) {
   return (
     <div className="w-[480px] h-[655px] flex flex-col justify-between rounded-[8px] p-8 bg-[#FFFFFF]">
       <div className="flex flex-col gap-[28px]">
@@ -15,8 +16,9 @@ export default function StepTwo({ nextPage }) {
           <TextField />
         </div>
       </div>
-      <div>
-        <Button nextPage={nextPage} buttonText="Continue 2/3" />
+      <div className="flex gap-1">
+        <ButtonPrevious previousPage={previousPage} buttonText="Back" />
+        <ButtonNextSmall nextPage={nextPage} buttonText="Continue 2/3" />
       </div>
     </div>
   );
