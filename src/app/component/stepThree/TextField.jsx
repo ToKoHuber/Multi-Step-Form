@@ -20,10 +20,7 @@ export default function TextField({
           name="birthDate"
         />
       </div>
-      <ImageUpload
-        onImageUpload={handleImageUpload}
-        error={formErrors.profileImage}
-      />
+      <ImageUpload onImageUpload={onImageUpload} error={error} />
     </div>
   );
 }
