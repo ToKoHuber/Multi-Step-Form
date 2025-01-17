@@ -1,23 +1,43 @@
 import { Input } from "@/app/component/Input";
 
-export default function TextField() {
+export default function TextField({ formValues, formErrors, handleChange }) {
   return (
     <div className="flex flex-col gap-3">
-      <Input type="email" label="Email" placeholder="Enter Your Email" />
       <Input
-        type="tel"
+        label="Email"
+        placeholder="Your email"
+        type="email"
+        value={formValues.email}
+        error={formErrors.email}
+        handleChange={handleChange}
+        name="email"
+      />
+      <Input
         label="Phone number"
-        placeholder="Enter Your Phone number"
+        placeholder="Your phone number"
+        type="text"
+        value={formValues.phoneNumber}
+        error={formErrors.phoneNumber}
+        handleChange={handleChange}
+        name="phoneNumber"
       />
       <Input
-        type="password"
         label="Password"
-        placeholder="Enter Your Password"
+        placeholder="Your password"
+        type="password"
+        value={formValues.password}
+        error={formErrors.password}
+        handleChange={handleChange}
+        name="password"
       />
       <Input
-        type="password"
         label="Confirm password"
-        placeholder="Enter Your Password Again"
+        placeholder="Confirm password"
+        type="password"
+        value={formValues.confirmPassword}
+        error={formErrors.confirmPassword}
+        handleChange={handleChange}
+        name="confirmPassword"
       />
     </div>
   );

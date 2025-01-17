@@ -1,24 +1,29 @@
 import { Input } from "@/app/component/Input";
+import ImageUpload from "../ImageUpload";
 
-export default function TextField() {
+export default function TextField({
+  formValues,
+  formErrors,
+  handleChange,
+  onImageUpload,
+  error,
+}) {
   return (
     <div className="flex flex-col gap-3">
-      <Input
-        type="date"
-        label="Date of birth"
-        placeholder="Enter your date of birth"
-      />
-      <div className="flex flex-col gap-3">
-        <div className="text-[#334155] text-Inter text-[14px] normal font-semibold leading-[16px]">
-          <p>Profile image</p>
-        </div>
-        <div className="w-[416px] h-[180px] border-2 bg-[#7F7F80]">
-          <img
-            src="https://www.stevanpopovic.com/static/89928a0c8f31bfcf8d1eb33bfdc00bd9/b7f47/pain%2Breflection%3Dprogress.jpg"
-            alt=""
-          />
-        </div>
+      <div className="mt-[-5px]">
+        <Input
+          type="date"
+          label="Date of birth"
+          value={formValues.birthDate}
+          error={formErrors.birthDate}
+          handleChange={handleChange}
+          name="birthDate"
+        />
       </div>
+      <ImageUpload
+        onImageUpload={handleImageUpload}
+        error={formErrors.profileImage}
+      />
     </div>
   );
 }
